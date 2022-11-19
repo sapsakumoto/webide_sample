@@ -1,0 +1,29 @@
+{
+  "remote_source_grant_service_SKMT": {
+    "object_owner": {
+      "roles": [
+        "GEN_GRANTOR_ROLE_SKMT"
+      ],
+      "global_object_privileges": [
+        {
+          "name": "CAL2020_SKMT",
+          "type": "REMOTE SOURCE",
+          "privileges": [
+		 	"CREATE VIRTUAL TABLE", 
+			"REATE VIRTUAL FUNCTION",
+			"CREATE REMOTE SUBSCRIPTION",
+			"LINKED DATABASE",
+			"PROCESS REMOTE SxUBSCRIPTION EXCEPTION",
+			"ALTER",
+			"DROP"
+          ]
+        }
+      ]
+    },
+    "application_user": {
+      "roles": [
+        "GEN_GRANTOR_ROLE_SKMT"
+      ]
+    }
+  }
+}

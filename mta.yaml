@@ -1,0 +1,27 @@
+ID: SDI_SAMPLE
+_schema-version: '2.1'
+version: 0.0.1
+modules:
+  - name: db
+    type: hdb
+    path: db
+    requires:
+      - name: hdi_db
+        properties:
+          TARGET_CONTAINER: '~{hdi-container-name}'
+      - name: grant_service
+
+resources:
+  - name: hdi_db
+    parameters:
+      config:
+        schema: SDI_SAMPLE
+        database_id: 4dc3e4ee-0f6f-4b79-abe9-9fdb05c26af6
+        properties:
+          hdi-container-name: '${service-name}'
+          type: com.sap.xs.hdi-container
+          
+  - name: grant_service
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: remote_source_grant_service_SKMT
